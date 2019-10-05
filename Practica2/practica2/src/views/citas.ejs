@@ -1,0 +1,38 @@
+<% include partial/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td>Cita</td>
+            <td>Cliente</td>
+            <td>Fecha</td>
+            <td>HoraInico</td>
+            <td>HoraFin</td>
+            <td>Estado</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (data) { %>
+            <% for(var i = 0; i < data.length; i++) { %>
+               <% if (data[i].status==0) { estado="pendiente";} else {estado="completado";} %>
+              <tr>
+                <td><%= (i + 1) %></td>
+                <td><%= data[i].nombre %></td>
+                <td><%= data[i].fecha %></td>
+                <td><%= data[i].hora_inicio %></td>
+                <td><%= data[i].hora_fin %></td>
+                <td><%= estado %><a href="/<%= data[i].doctor_coddoctor %>/update/<%= data[i].codcita %>" class="btn btn-info">Edit</a></td>
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<% include partial/_footer %>

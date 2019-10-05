@@ -1,0 +1,34 @@
+<% include partial/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5 offset-md-3 card">
+      <div class="card-body">
+        <H1> Llenar datos</H1>
+        <form action="/addDesc" method="POST">
+
+           <div class="form-group">
+            <input type="text" name="descripcion" placeholder="descripcion" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="number" name="peso" placeholder="peso" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="number" name="altura" placeholder="altura" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="number" name="temperatura" placeholder="temperatura" class="form-control">
+          </div>
+         <div class="form-group">
+            <input type="number" name="codigo" value="codigo Cita"  class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary">
+            save Juego
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partial/_footer %>

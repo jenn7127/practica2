@@ -1,0 +1,26 @@
+{
+  "name": "practica2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "test": "nodemon --exec \"mocha -R min\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-myconnection": "^1.0.4",
+    "mocha": "^6.2.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
